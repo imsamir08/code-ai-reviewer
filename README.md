@@ -103,7 +103,7 @@ Detailed Code Quality Report
  │ JWT Auth     │  │ MongoDB Atlas  │  │ Gemini AI API   │
  └──────────────┘  └────────────────┘  └─────────────────┘
 
-
+---
 
 ## 🛠️ Technology Stack
 
@@ -118,6 +118,8 @@ Detailed Code Quality Report
 | React Markdown | Review Rendering    |
 | Vite           | Build Tool          |
 
+---
+
 ### Backend
 
 | Technology | Purpose               |
@@ -128,12 +130,16 @@ Detailed Code Quality Report
 | bcryptjs   | Password Encryption   |
 | dotenv     | Environment Variables |
 
+---
+
 ### Database
 
 | Technology    | Purpose        |
 | ------------- | -------------- |
 | MongoDB Atlas | Cloud Database |
 | Mongoose      | ODM            |
+
+---
 
 ### AI Layer
 
@@ -145,28 +151,68 @@ Detailed Code Quality Report
 
 ## 📂 Project Structure
 
-AI-Code-Reviewer
+Code_Reviewer/
 │
-├── Backend
-│   ├── src
-│   │   ├── config
-│   │   ├── controllers
-│   │   ├── middleware
-│   │   ├── models
-│   │   ├── routes
-│   │   └── services
+├── Backend/
 │   │
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── ai.controller.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── ai.routes.js
+│   │   │   └── auth.routes.js
+│   │   │
+│   │   ├── services/
+│   │   │   └── ai.service.js
+│   │   │
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   └── Review.js
+│   │   │
+│   │   ├── middleware/
+│   │   │   └── auth.middleware.js
+│   │   │
+│   │   ├── config/
+│   │   │   └── db.js
+│   │   │
+│   │   └── app.js
+│   │
+│   ├── .env
 │   ├── server.js
-│   └── package.json
+│   ├── package.json
+│   └── package-lock.json
 │
-├── Fronted
-│   ├── src
-│   │   ├── components
-│   │   ├── pages
-│   │   ├── App.jsx
-│   │   └── main.jsx
+├── Fronted/
 │   │
-│   └── package.json
+│   ├── public/
+│   │
+│   ├── src/
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   └── History.jsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── CodeEditor.jsx
+│   │   │   └── ReviewPanel.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   │
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── App.css
+│   │   └── index.css
+│   │
+│   ├── index.html
+│   ├── vite.config.js
+│   ├── package.json
+│   └── package-lock.json
 │
 └── README.md
 
@@ -176,7 +222,6 @@ AI-Code-Reviewer
 ## 🔍 Core Functionalities Implemented
 
 ### Authentication Flow
-
 
 Register
     ↓
@@ -210,17 +255,18 @@ Rendered Markdown Response
 
 ## 📸 Screenshots
 
-
-
-[Add Screenshot]
-
 ### Registration Page
 
-[Add Screenshot]
+<img width="1861" height="833" alt="image" src="https://github.com/user-attachments/assets/9f162323-b596-4bd6-aa62-ca31bc7c17d1" />
+
+### Login Page
+
+<img width="1891" height="856" alt="image" src="https://github.com/user-attachments/assets/9bc2ce41-5ea7-495d-b13b-058d6a987bc4" />
 
 ### Dashboard
 
-[Add Screenshot]
+<img width="1862" height="881" alt="image" src="https://github.com/user-attachments/assets/98a4655b-f1b7-44bd-b1bc-839baed83414" />
+
 
 ### AI Review Response
 
